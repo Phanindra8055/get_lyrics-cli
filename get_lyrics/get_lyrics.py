@@ -32,23 +32,10 @@ def get_lyrics(artist, song_title):
         lyrics = lyrics.replace('<i>', '').replace('</i>', '').strip()
         lyrics = title + lyrics
 
-        return  lyrics, "Lyrics found"
+        with open('lyrics.txt', 'w') as f:
+            f.write(lyrics)
+
+        return  "Lyrics found"
     except Exception as e:
-        return "Exception occurred \n" +str(e)
+        return "Lyrics Not Found"
 
-
-# print('What is the name of the song? ')
-# song_title = input('> ')
-# print('What is the name of the artist? ')
-# artist = input('> ')
-
-# lyrics, result = get_lyrics(artist, song_title)
-
-# print(result)
-
-# root = Tk()
-# T = Text(root)
-
-# T.pack()
-# T.insert(INSERT, lyrics)
-# mainloop()

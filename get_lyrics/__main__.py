@@ -52,7 +52,7 @@ def main():
         print(result)
 
         if result == 'Lyrics found':
-            os_command_string = "notepad.exe lyrics.txt"
+            os_command_string = "nano lyrics.txt"
 
             os.system(os_command_string)
     elif len(args) == 1:
@@ -66,7 +66,6 @@ for help use '--h' or '--help'
                 """)
     elif len(args) == 0:
         intro()
-
 
 
 if __name__ == '__main__':
